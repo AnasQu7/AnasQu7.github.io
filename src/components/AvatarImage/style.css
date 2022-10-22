@@ -1,0 +1,71 @@
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+
+.avatar {
+	width: 250px;
+	height: 250px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	
+}
+.avatar img {
+    width: 100%;
+  
+}
+
+@keyframes floatnight {
+	0% {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 0 25px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(0px);
+	}
+}
+.avatarDark {
+	
+	width: 250px;
+	height: 250px;
+	box-sizing: border-box;
+	border: 5px rgb(0, 0, 0) solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+	transform: translatey(0px);
+	animation: floatnight 6s ease-in-out infinite;
+
+}
+
+.avatarDark img {
+    width: 100%;
+  
+}

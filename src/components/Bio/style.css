@@ -1,0 +1,117 @@
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+
+
+.bioContainer {
+	padding: 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    min-height: 400px;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	
+}
+
+
+@keyframes floatnight {
+	0% {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 0 25px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(0px);
+	}
+}
+.bioContainerDark {
+	padding: 20px;
+    background-color: rgba(12, 13, 14, 0.425);
+    border-radius: 20px;
+    min-height: 400px;
+	overflow: hidden;
+	color: #fff;
+	box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+	transform: translatey(0px);
+	animation: floatnight 6s ease-in-out infinite;
+	
+}
+/* 88888888888888888888888888888888888888 hire me hire-btn*/
+.hire-btn{
+	position: relative;
+	width: 256px;
+	height: 64px;
+	line-height: 64px;
+	transition: all 0.3s;
+}
+.hire-btn span {
+    transition: all 0.3s;
+    transform: scale(1, 1);
+  }
+
+.hire-btn::before, .hire-btn::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	transition: all 0.3s;
+	border: 1px solid ;
+  }
+  
+  .hire-btn:hover::after {
+	animation-name: rotatecw;
+	animation-duration: 2s;
+  }
+  .hire-btn:hover::before {
+	animation-name: rotateccw; 
+	animation-duration: 3s;
+  }
+  .hire-btn:hover::after, .hire-btn:hover::before {
+	left: 96px;
+	width: 64px;
+	
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+  }
+  
+  @keyframes rotatecw {
+	  from {transform: rotate(0deg);}
+	  to {transform: rotate(360deg);}
+  }
+  
+  @keyframes rotateccw {
+	  from {transform: rotate(0deg);}
+	  to {transform: rotate(-360deg);}
+  }
+
+
+
+/* *****************************************88 8*******************************************************/
