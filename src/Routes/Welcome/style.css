@@ -5,6 +5,7 @@
 
 .body{
   height: calc(100vh - 8em);
+  width: 100%;
   padding: 4em;
   color: rgba(255,255,255,.75);
   font-family: 'Anonymous Pro', monospace;  
@@ -15,10 +16,10 @@
 .line-1{
     position: relative;
     top: 50%;  
-    width: 24em;
+    width: 39vw;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
+    font-size: 2vw;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -32,7 +33,7 @@
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 24em;}
+  to{width: 39vw;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}

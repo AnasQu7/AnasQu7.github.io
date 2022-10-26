@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Box } from '@chakra-ui/react'
 import { ThemeContext } from '../../Context/ThemeContextProvider'
 import "./style.css"
+import ContactCard from '../../components/ContactCard/ContactCard'
 function Contact() {
     const {Theme} = useContext(ThemeContext)
   return (
@@ -10,8 +11,7 @@ function Contact() {
     <Box pt="100px" className={Theme? "headerDark" : "header"}>
     
     <Box gap={50} flexDirection={{lg:'row',md:'column',sm:'column',base:'column'}} className="inner-header flex">
-    {/* <AvatarImage img="/images/Avatar.jpg"/>
-    <Bio/> */}
+     <ContactCard/>
     </Box>
     
     
@@ -37,8 +37,8 @@ function Contact() {
     
     
     
-    <Box className="content flex" bg={Theme ? "#000" : "#fff"}>
-      <p>dummy text </p>
+    <Box className="content flex" color="#55ad" bg={Theme ? "#000" : "#fff"}>
+      <p>Courage is like a muscle. We strengthen it by use.</p>
     </Box>
     
         </Box>

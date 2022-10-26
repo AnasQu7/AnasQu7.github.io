@@ -1,22 +1,22 @@
 
 import { useEffect, useState } from 'react';
-import './App.css';
+import { useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
-import Welcome from './components/Welcome/Welcome';
+import Welcome from './Routes/Welcome/Welcome';
 import AllRoutes from './Routes/AllRoutes'
 function App() {
-  const [Enter,setEnter] = useState(false)
+  const navigate = useNavigate()
   useEffect(()=>{
      setTimeout(()=>{
-           setEnter(true)
+           navigate('/aboutme')
      },5500)
   },[])
   return (
     <div className="App">
       
       <Navbar/>
-      {Enter?<AllRoutes/>:<Welcome/>}
+      <AllRoutes/>
       <ThemeSwitch/>
     </div>
   );

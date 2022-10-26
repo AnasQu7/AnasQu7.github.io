@@ -12,7 +12,7 @@ function Projects() {
       description : "Tripoto is a social platform to share and discover travel experiences." , 
       feature : ["User Authentication","Explore","Forum"] ,
       title : "Tripoto" ,
-      tech : ["JavaScript" ,"React" ,"Redux" , "Chakra UI" ] , 
+      tech : ["JavaScript" ,"React" ,"Redux" , "ChakraUI" ] , 
       git : "https://github.com/AnasQu7/opposite-representative-709" , 
       dl : "https://trpipto-cloned.netlify.app/"
     },
@@ -40,7 +40,7 @@ function Projects() {
       description : "Chat-Hat is created by me where we can chat with our friends and family" , 
       feature : ["Group Chat","Connected Users","Notification"] ,
       title : "Chat-Hat" ,
-      tech : ["JavaScript" ,"React" ,"Redux" , "Chakra UI" ] , 
+      tech : ["JavaScript" ,"React" ,"Socket.io" , "ChakraUI" ] , 
       git : "https://github.com/AnasQu7/Chat-App" , 
       dl : "https://chat-hat.netlify.app/"
     },
@@ -49,7 +49,7 @@ function Projects() {
       description : "YouTube is a video sharing service where users can watch, like, share, comment and upload their own videos." , 
       feature : ["Vedio Streaming","Search"] ,
       title : "Youtube" ,
-      tech : ["JavaScript" , "Html" ,"Css" , "Youtube Api" ] , 
+      tech : ["JavaScript" , "Html" ,"Css"  ] , 
       git : "" , 
       dl : "https://heroic-syrniki-3cfb29.netlify.app/"
     },
@@ -129,7 +129,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
 
 
 <Box className="content flex" color="#55ad" bg={Theme ? "#000" : "#fff"}>
-  <p>Made with love</p>
+  <p>Worry is a misuse of imagination.</p>
 </Box>
 
     </Box>

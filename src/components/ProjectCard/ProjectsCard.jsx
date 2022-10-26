@@ -1,12 +1,30 @@
 import { Box, Button, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React, { useContext } from "react";
+import { FaExternalLinkAlt, FaGithubAlt } from "react-icons/fa";
+import { TbBrandJavascript, TbBrandNextjs } from "react-icons/tb";
+import { SiChakraui, SiExpress, SiHtml5, SiMongodb, SiNodedotjs, SiReact, SiRedux, SiSocketdotio, SiTypescript } from "react-icons/si";
+import { IoLogoCss3 } from "react-icons/io";
+
 import { ThemeContext } from "../../Context/ThemeContextProvider";
 import "./style.css";
 
 function ProjectsCard({ props }) {
   const { image, description, title, tech, git, dl, feature } = props;
   const { Theme } = useContext(ThemeContext);
-
+  const techStack = {
+    JavaScript : <TbBrandJavascript size='50%' />, 
+      React : <SiReact size='50%' /> ,
+      Node : <SiNodedotjs  size='50%' /> , 
+      Express : <SiExpress size='50%' />, 
+      MongoDb : <SiMongodb size='50%' /> , 
+      TypeScript : <SiTypescript size='50%' />,
+      Redux : <SiRedux size='50%' />,
+      'Socket.io': <SiSocketdotio size='50%' />,
+      Nextjs : <TbBrandNextjs size='50%'/>,
+      Html : <SiHtml5 size='50%' />,
+      Css : <IoLogoCss3 size='50%' />,
+      ChakraUI : <SiChakraui size='50%'/>
+  }
   return (
     <Box
       transition="2s"
@@ -41,8 +59,8 @@ function ProjectsCard({ props }) {
           </Box>
           <SimpleGrid
             columnGap={15}
-            columns={{ lg: 3, md: 2, sm: 2, base: 2 }}
-            h="30%"
+            columns={{ lg: 4, md: 3, sm: 2, base: 2 }}
+            
             mb="20px"
             mt="20px"
             gap="5px"
@@ -51,8 +69,9 @@ function ProjectsCard({ props }) {
           >
             {tech.map((e) => {
               return (
-                <Box w="100%" border="1px solid" borderRadius="20px">
-                  <Text>{e}</Text>
+                <Box>
+                  {/* {let x =  } */}
+                  <Box p={4}  margin='auto' border="1px solid" borderRadius="20px" w='80px' display='flex' alignItems='center' justifyContent='center'>{techStack[e]}</Box>
                 </Box>
               );
             })}
@@ -95,8 +114,9 @@ function ProjectsCard({ props }) {
                 
               }}
               variant="outline"
+              p={6}
             >
-              Git Hub
+             <FaGithubAlt size={30}/>
             </Button>:""}
             <Button
               colorScheme={Theme ? "white" : "blue"}
@@ -105,8 +125,9 @@ function ProjectsCard({ props }) {
   
               }}
               variant="outline"
+              p={6}
             >
-              DEPLOYED LINK
+              <FaExternalLinkAlt size={30}/>
             </Button>
           </Flex>
         </Box>

@@ -40,8 +40,8 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
 
 
 
-<Box className="content flex" bg={Theme ? "#000" : "#fff"}>
-  <p>dummy text </p>
+<Box color="#55ad" className="content flex" bg={Theme ? "#000" : "#fff"}>
+  <p>If there is no struggle, there is no progress.</p>
 </Box>
 
     </Box>

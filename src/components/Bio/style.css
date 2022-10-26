@@ -19,6 +19,7 @@
 
 
 .bioContainer {
+	text-align: center;
 	padding: 20px;
     background-color: aliceblue;
     border-radius: 20px;
@@ -27,7 +28,7 @@
 	box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
-	
+	color: rgb(10, 71, 109);
 }
 
 
@@ -50,6 +51,7 @@
 }
 .bioContainerDark {
 	padding: 20px;
+	text-align: center;
     background-color: rgba(12, 13, 14, 0.425);
     border-radius: 20px;
     min-height: 400px;
