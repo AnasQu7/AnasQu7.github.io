@@ -1,10 +1,9 @@
 import React, { useContext } from 'react'
-import Bio from '../../components/Bio/Bio'
-import AvatarImage from '../../components/AvatarImage/AvatarImage'
 import { Box } from '@chakra-ui/react'
 import { ThemeContext } from '../../Context/ThemeContextProvider'
 import "./style.css"
-function Aboutme() {
+import ResumeCard from '../../components/ResumeCard/ResumeCard'
+function Resume() {
   const {Theme} = useContext(ThemeContext)
   
   return (
@@ -13,8 +12,7 @@ function Aboutme() {
 <Box pt="100px" className={Theme? "headerDark" : "header"}>
 
 <Box gap={50} flexDirection={{lg:'row',md:'column',sm:'column',base:'column'}} className="inner-header flex">
-<AvatarImage img="/images/Avatar.jpg"/>
-<Bio/>
+<ResumeCard/>
 </Box>
 
 
@@ -41,11 +39,11 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
 
 
 <Box color="#55ad" className="content flex" bg={Theme ? "#000" : "#fff"}>
-  <p>“If there is no struggle, there is no progress.”</p>
+  <p>“It is never too late to be what you might have been.”</p>
 </Box>
 
     </Box>
   )
 }
 
-export default Aboutme
+export default Resume

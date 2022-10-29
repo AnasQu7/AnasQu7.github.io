@@ -42,7 +42,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
 
 
 <Box className="content flex" color="#55ad" bg={Theme ? "#000" : "#fff"}>
-  <p>Somewhere, something incredible is waiting to be known.</p>
+  <p>“Somewhere, something incredible is waiting to be known.”</p>
 </Box>
 
     </Box>

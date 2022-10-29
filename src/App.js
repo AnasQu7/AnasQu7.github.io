@@ -1,9 +1,8 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
-import Welcome from './Routes/Welcome/Welcome';
 import AllRoutes from './Routes/AllRoutes'
 function App() {
   const navigate = useNavigate()

@@ -1,5 +1,5 @@
-import { Box, Heading, Text } from '@chakra-ui/react'
-import React, { useContext, useState } from 'react'
+import { Box, Text } from '@chakra-ui/react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ThemeContext } from '../../Context/ThemeContextProvider'
 import "./style.css"

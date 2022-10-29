@@ -1,6 +1,6 @@
-import {Box, Button, Text} from "@chakra-ui/react"
+import {Box, Text} from "@chakra-ui/react"
 import { useContext } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { ThemeContext } from "../../Context/ThemeContextProvider"
 // import { ThemeContext } from "../../Context/ThemeContextProvider"
 import NavMenu from "../NavMenu/NavMenu"
@@ -23,9 +23,11 @@ function Navbar() {
       <Link to="/Skills" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Skills</Text>  </Link>
       <Link to="/Projects" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Projects</Text></Link>
       <Link to="/Contact" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Contact</Text></Link>
-      <Text onClick={()=>{
-        window.open('https://drive.google.com/file/d/1Lfzd1CVfZ756PigWVKUQtyQS75lbFFPw/view?usp=sharing')
-      }} color='rgb(10, 71, 109)' className="hover" variant='outline'>Resume</Text>
+      <Link to='/resume'><Text
+      //  onClick={()=>{
+      //   window.open('https://drive.google.com/file/d/1Lfzd1CVfZ756PigWVKUQtyQS75lbFFPw/view?usp=sharing')
+      // }}
+       color='rgb(10, 71, 109)' className="hover" variant='outline'>Resume</Text></Link>
      </Box>
      <NavMenu />
     </Box></>

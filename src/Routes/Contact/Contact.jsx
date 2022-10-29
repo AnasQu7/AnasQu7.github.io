@@ -38,7 +38,7 @@ function Contact() {
     
     
     <Box className="content flex" color="#55ad" bg={Theme ? "#000" : "#fff"}>
-      <p>Courage is like a muscle. We strengthen it by use.</p>
+      <p>“Courage is like a muscle. We strengthen it by use.”</p>
     </Box>
     
         </Box>

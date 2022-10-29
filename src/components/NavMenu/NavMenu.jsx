@@ -16,9 +16,7 @@ function NavMenu() {
     <Link to = "/skills"><MenuItem>Skills</MenuItem></Link>
     <Link to = "/projects"><MenuItem>Projects</MenuItem></Link>
     <Link to = "/contact"><MenuItem>Contact</MenuItem></Link>
-    <MenuItem onClick={()=>{
-        window.open('https://drive.google.com/file/d/1Lfzd1CVfZ756PigWVKUQtyQS75lbFFPw/view?usp=sharing')
-      }}>Resume</MenuItem>
+    <Link to = "/resume"><MenuItem>Resume</MenuItem></Link>
     
   </MenuList>
 </Menu>

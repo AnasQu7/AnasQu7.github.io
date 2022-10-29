@@ -64,7 +64,7 @@ function ProjectsCard({ props }) {
             mb="20px"
             mt="20px"
             gap="5px"
-            fontFamily="cursive"
+            
             alignItems="center"
           >
             {tech.map((e) => {
@@ -79,7 +79,6 @@ function ProjectsCard({ props }) {
         </Box>
         <Box
           w={{ lg: "40%", md: "40%", sm: "100%", base: "100%" }}
-          fontFamily="cursive"
           h="100%"
           textAlign="center"
         >

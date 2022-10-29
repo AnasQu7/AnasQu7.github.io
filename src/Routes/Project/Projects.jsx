@@ -93,7 +93,7 @@ function Projects() {
          }
       }} ><IoIosArrowBack color={Theme?'white':'Black' }size={30}/></Box>
      <Box zIndex="2000" position="fixed" right="15px" top="50%" onClick={()=>{
-         if(Pro==projectData.length-1){
+         if(Pro===projectData.length-1){
           setPro(0)
          }else{
           setPro(Pro+1)
@@ -129,7 +129,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
 
 
 <Box className="content flex" color="#55ad" bg={Theme ? "#000" : "#fff"}>
-  <p>Worry is a misuse of imagination.</p>
+  <p>“Worry is a misuse of imagination.”</p>
 </Box>
 
     </Box>

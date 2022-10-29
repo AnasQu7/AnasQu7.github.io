@@ -6,7 +6,7 @@ export const ThemeContext = createContext()
 
 
 export default function ThemeContextProvider({children}){
-    const [Theme , SetTheme] = useState(true)
+    const [Theme , SetTheme] = useState(false)
     const toggleTheme = ()=>{
          SetTheme(!Theme)
     }
