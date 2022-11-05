@@ -12,6 +12,7 @@ function NavMenu() {
     <GiHamburgerMenu/>
   </MenuButton>
   <MenuList color="blue.500"  bg={Theme?"black":"white"} >
+    <Link to = "/"><MenuItem>Home</MenuItem></Link>
     <Link to = "/aboutme"><MenuItem>About Me</MenuItem></Link>
     <Link to = "/skills"><MenuItem>Skills</MenuItem></Link>
     <Link to = "/projects"><MenuItem>Projects</MenuItem></Link>

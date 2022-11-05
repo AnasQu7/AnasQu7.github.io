@@ -19,6 +19,7 @@ function Navbar() {
      </Box>
     
      <Box display={{lg:"flex",md:"none",sm:"none",base:"none"}} visibility={{lg:"initial",md:"hidden",sm:"hidden",base:"hidden"}}  w="50%" justifyContent="space-evenly" >
+      <Link to="/" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Home</Text></Link>
       <Link to="/aboutme" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>About Me</Text></Link>
       <Link to="/Skills" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Skills</Text>  </Link>
       <Link to="/Projects" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Projects</Text></Link>

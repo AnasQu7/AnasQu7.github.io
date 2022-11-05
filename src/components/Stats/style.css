@@ -1,0 +1,64 @@
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+
+
+.statsContainer {
+	text-align: center;
+	padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	color: rgb(10, 71, 109);
+	
+}
+
+
+@keyframes floatnight {
+	0% {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 0 25px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 0px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+		transform: translatey(0px);
+	}
+}
+.statsContainerDark {
+	text-align: center;
+	padding: 20px;
+    background-color: rgba(12, 13, 14, 0.425);
+    border-radius: 20px;
+   
+	overflow: hidden;
+	color: #fff;
+	box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+	transform: translatey(0px);
+	animation: floatnight 6s ease-in-out infinite;
+	
+}
+
