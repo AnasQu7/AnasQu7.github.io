@@ -3,7 +3,6 @@ import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../../Context/ThemeContextProvider'
 import ProjectsCard from '../../components/ProjectCard/ProjectsCard'
 import "./style.css"
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { motion } from 'framer-motion'
 function Projects() {
   const {Theme} = useContext(ThemeContext)
@@ -84,26 +83,27 @@ function Projects() {
     
   ]
   const [Pro , setPro] = useState(0)
+  const nextProject = ()=>{
+    if(Pro===projectData.length-1){
+      setPro(0)
+     }else{
+       setPro(Pro+1)
+     }
+   }
+   const preProject = ()=>{
+    if(Pro===0){
+      setPro(projectData.length-1)
+    }else{
+      setPro(Pro-1)
+    }
+  }
   return (
   <Box width='100%' id="/projects">
 <Box gap={50} className="inner-header flex">
-    <Box zIndex="2000" position="relative" left="15px" top="50%" onClick={()=>{
-      if(Pro===0){
-        setPro(projectData.length-1)
-      }else{
-        setPro(Pro-1)
-      }
-    }} ><IoIosArrowBack color={Theme?'white':'Black' }size={30}/></Box>
-    <Box>
-<ProjectsCard props={projectData[Pro]}/>
+     <Box>
+<ProjectsCard props={projectData[Pro]} nextProject={nextProject} preProject={preProject}/>
     </Box>
-   <Box zIndex="2000" position="relative" right="15px" top="50%" onClick={()=>{
-     if(Pro===projectData.length-1){
-       setPro(0)
-      }else{
-        setPro(Pro+1)
-      }
-    }} ><IoIosArrowForward color={Theme?'white':'Black' }size={30}/></Box>
+   
 </Box>
     </Box>
   )

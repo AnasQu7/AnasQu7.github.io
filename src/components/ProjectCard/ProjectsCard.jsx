@@ -4,11 +4,11 @@ import { FaExternalLinkAlt, FaGithubAlt } from "react-icons/fa";
 import { TbBrandJavascript, TbBrandNextjs } from "react-icons/tb";
 import { SiChakraui, SiExpress, SiHtml5, SiMongodb, SiNodedotjs, SiReact, SiRedux, SiSocketdotio, SiTypescript } from "react-icons/si";
 import { IoLogoCss3 } from "react-icons/io";
-
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { ThemeContext } from "../../Context/ThemeContextProvider";
 import "./style.css";
 
-function ProjectsCard({ props }) {
+function ProjectsCard({ props , nextProject ,preProject }) {
   const { image, description, title, tech, git, dl, feature } = props;
   const { Theme } = useContext(ThemeContext);
   const techStack = {
@@ -30,10 +30,21 @@ function ProjectsCard({ props }) {
       transition="2s"
       w={{ lg: "80vw", md: "90vw", sm: "90vw", base: "90vw" }}
       mb="50px"
-      p={{ lg: 10, md: 6, sm: 20, base: 20 }}
+      p={{ lg: 10, md: 6, sm: 5, base: 20 }}
       className={Theme ? "projectContainerDark" : "projectContainer"}
+      display='flex'
+      gap="25px"
     >
-      <Text mb='30px'  fontSize="2.7em" className={Theme ? "neonText" : ""}>Projects</Text>
+      
+
+      
+    <Box mt={265} zIndex="2000" position="relative" left="15px" top="50%" onClick={preProject} ><IoIosArrowBack color={Theme?'white':'Black' }size={30}/></Box>
+    
+
+
+
+<Box>
+<Text mb='30px'  fontSize="2.7em" className={Theme ? "neonText" : ""}>Projects</Text>
       <Text
         mb="50px"
         display={{ lg: "none", md: "none", sm: "block", base: "block" }}
@@ -132,6 +143,13 @@ function ProjectsCard({ props }) {
           </Flex>
         </Box>
       </Box>
+</Box>
+
+
+<Box mt={265}  zIndex="2000" position="relative" right="15px" top="50%" onClick={nextProject} ><IoIosArrowForward color={Theme?'white':'Black' }size={30}/></Box>
+
+
+
     </Box>
   );
 }
