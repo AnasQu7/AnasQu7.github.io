@@ -8,20 +8,34 @@ import StatsCard from '../../components/Stats/StatsCard'
 import Streak from '../../components/Stats/Streak'
 
 import { ThemeContext } from '../../Context/ThemeContextProvider'
+import Aboutme from '../Aboutme/Aboutme'
+import Contact from '../Contact/Contact'
+import Projects from '../Project/Projects'
+import Skills from '../Skills/Skills'
 
 function Home() {
     const {Theme} = useContext(ThemeContext)
   return (
+    
     <Box>
       
     <Box pt="100px" className={Theme? "headerDark" : "header"}>
     
     <Box gap={50} flexDir="column" className="inner-header flex">
+    
     <HomeCard/>
+
+     <Aboutme/>
+    <Box id="/skills">
+     <Skills/>
     <Stats Card={StatsCard}/>
     <Stats Card={Streak}/>
-    <Stats Card={GitStats1}/>
+    <Stats Card={GitStats1}/> 
     <Stats Card={GitStats}/>
+    </Box>
+    
+     <Projects/>
+     <Contact/>
     </Box>
     
     

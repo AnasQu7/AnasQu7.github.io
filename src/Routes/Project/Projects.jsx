@@ -1,9 +1,10 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../../Context/ThemeContextProvider'
 import ProjectsCard from '../../components/ProjectCard/ProjectsCard'
 import "./style.css"
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import { motion } from 'framer-motion'
 function Projects() {
   const {Theme} = useContext(ThemeContext)
   const projectData = [
@@ -84,54 +85,26 @@ function Projects() {
   ]
   const [Pro , setPro] = useState(0)
   return (
+  <Box width='100%' id="/projects">
+<Box gap={50} className="inner-header flex">
+    <Box zIndex="2000" position="relative" left="15px" top="50%" onClick={()=>{
+      if(Pro===0){
+        setPro(projectData.length-1)
+      }else{
+        setPro(Pro-1)
+      }
+    }} ><IoIosArrowBack color={Theme?'white':'Black' }size={30}/></Box>
     <Box>
-      <Box zIndex="2000" position="fixed" left="15px" top="50%" onClick={()=>{
-         if(Pro===0){
-          setPro(projectData.length-1)
-         }else{
-          setPro(Pro-1)
-         }
-      }} ><IoIosArrowBack color={Theme?'white':'Black' }size={30}/></Box>
-     <Box zIndex="2000" position="fixed" right="15px" top="50%" onClick={()=>{
-         if(Pro===projectData.length-1){
-          setPro(0)
-         }else{
-          setPro(Pro+1)
-         }
-     }} ><IoIosArrowForward color={Theme?'white':'Black' }size={30}/></Box>
-<Box pt="100px" className={Theme? "headerDark" : "header"}>
-
-<Box gap={50} flexDirection={{lg:'row',md:'column',sm:'column',base:'column'}} className="inner-header flex">
 <ProjectsCard props={projectData[Pro]}/>
+    </Box>
+   <Box zIndex="2000" position="relative" right="15px" top="50%" onClick={()=>{
+     if(Pro===projectData.length-1){
+       setPro(0)
+      }else{
+        setPro(Pro+1)
+      }
+    }} ><IoIosArrowForward color={Theme?'white':'Black' }size={30}/></Box>
 </Box>
-
-
-<Box>
-<svg className="waves" xmlns="http://www.w3.org/2000/svg" 
-xmlnsXlink="http://www.w3.org/1999/xlink"
-
-viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g className="parallax">
-<use xlinkHref="#gentle-wave" x="48" y="0" fill={Theme ? "rgba(010,010,010,0.7)"  : "rgba(255,255,255,0.7)"} />
-<use xlinkHref="#gentle-wave" x="48" y="3" fill={Theme ? "rgba(010,010,010,0.5)"  : "rgba(255,255,255,0.5)"} />
-<use xlinkHref="#gentle-wave" x="48" y="5" fill={Theme ? "rgba(010,010,010,0.3)"  : "rgba(255,255,255,0.3)"} />
-<use xlinkHref="#gentle-wave" x="48" y="7" fill={Theme ? "000" : "#fff"} />
-</g>
-</svg>
-</Box>
-
-
-</Box>
-
-
-
-<Box className="content flex" color="#55ad" bg={Theme ? "#000" : "#fff"}>
-  <p>“Worry is a misuse of imagination.”</p>
-</Box>
-
     </Box>
   )
 }

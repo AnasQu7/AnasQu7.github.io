@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react'
 import { ThemeContext } from '../../Context/ThemeContextProvider'
 import "./style.css"
 import ResumeCard from '../../components/ResumeCard/ResumeCard'
+import { motion } from 'framer-motion'
 function Resume() {
   const {Theme} = useContext(ThemeContext)
   
@@ -11,9 +12,15 @@ function Resume() {
       
 <Box pt="100px" className={Theme? "headerDark" : "header"}>
 
+<motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    >
 <Box gap={50} flexDirection={{lg:'row',md:'column',sm:'column',base:'column'}} className="inner-header flex">
 <ResumeCard/>
 </Box>
+      </motion.div>
 
 
 <Box>

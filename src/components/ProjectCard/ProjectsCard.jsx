@@ -33,6 +33,7 @@ function ProjectsCard({ props }) {
       p={{ lg: 10, md: 6, sm: 20, base: 20 }}
       className={Theme ? "projectContainerDark" : "projectContainer"}
     >
+      <Text mb='30px'  fontSize="2.7em" className={Theme ? "neonText" : ""}>Projects</Text>
       <Text
         mb="50px"
         display={{ lg: "none", md: "none", sm: "block", base: "block" }}
@@ -43,8 +44,8 @@ function ProjectsCard({ props }) {
           base: "initial",
         }}
         fontSize="2.7em"
-        className={Theme ? "neonText" : ""}
-      >
+        color="#0ba9ca" 
+        >
         {title}
       </Text>
       <Box
@@ -91,8 +92,8 @@ function ProjectsCard({ props }) {
               sm: "hidden",
               base: "hidden",
             }}
+            color="#0ba9ca" 
             fontSize="2.7em"
-            className={Theme ? "neonText" : ""}
           >
             {title}
           </Text>

@@ -45,7 +45,7 @@ function SkillsCard(props) {
       >
         {heading}
       </Text>
-      <SimpleGrid p={{lg:4,md:5,sm:'0px',base:'0px'}} gap={8} columns={{lg:5 , md : 4 , sm:2 , base:2}}>
+      <SimpleGrid p={{lg:4,md:5,sm:'0px',base:'0px'}} gap={8} columns={{lg:5 , md : 4 , sm:3 , base:2}}>
         {skills.map((e,i)=>{
             return <Box >
             <Box border='1px solid ' borderRadius={20} margin='auto' display='flex' flexDirection='column' gap={2} alignItems="center" textAlign="center" p={6} w={{"xl":'170px',lg:"140px",md:'140px',sm:'100px',base:'100px'}} key={i}>

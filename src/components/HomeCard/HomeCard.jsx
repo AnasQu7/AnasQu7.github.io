@@ -1,13 +1,14 @@
 import { Box, Button, Flex, Image, Text } from '@chakra-ui/react'
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import { ThemeContext } from '../../Context/ThemeContextProvider'
+import ResumeButton from './ResumeButton'
 import './style.css'
 function HomeCard() {
-    const navigate = useNavigate()
     const {Theme} = useContext(ThemeContext)
   return (
     <Box
+    id = "/"
     transition="2s"
     w={{ lg: "80vw", md: "90vw", sm: "90vw", base: "90vw" }}
     mb="50px"
@@ -29,12 +30,8 @@ function HomeCard() {
             I'm a full-stack web developer.
         </Text>
         <Flex justifyContent='space-evenly' marginTop="50px" w="100%">
-        <Button colorScheme='blue' variant='outline' onClick={()=>{
-            navigate('/aboutme')
-        }} >About me</Button>
-        <Button colorScheme='blue' variant='outline' onClick={()=>{
-            navigate('/resume')
-        }} >Resume</Button>
+        <Link spy={true} smooth={true} offset={-120} duration={500} to='/aboutme'><Button colorScheme='blue' size='md' variant='outline'>About me</Button></Link>
+        <ResumeButton/>
         </Flex>
         </Box>
     </Box>

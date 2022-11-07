@@ -41,7 +41,7 @@ function ContactCard() {
     flexDirection={{lg:'row', md:'column' , sm:'column' , base : 'column'}}
     justifyContent="space-evenly"
     transition="2s"
-    w={{lg : "80vw" , md : '80vw' , sm : '90vw' , base : '80vw'}} mb="50px" p={6} className={Theme ? 'bioContainerDark' : 'bioContainer'}>
+    w={{lg : "80vw" , md : '90vw' , sm : '90vw' , base : '90vw'}} mb="50px" p={6} className={Theme ? 'bioContainerDark' : 'bioContainer'}>
       <Box
       w={{lg:"400px",md:'100%' , sm:'100%',base:'100%'}} p={15}>
         <Text className={Theme ? "neonText" : "simptext"} fontSize={35}>Contact Me</Text>

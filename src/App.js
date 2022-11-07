@@ -1,13 +1,15 @@
+
 import Navbar from './components/Navbar/Navbar';
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
-import AllRoutes from './Routes/AllRoutes'
+
+import Home from './Routes/Home/Home';
 function App() {
   
   return (
     <div className="App">
       
       <Navbar/>
-      <AllRoutes/>
+       <Home/>
       <ThemeSwitch/>
     </div>
   );

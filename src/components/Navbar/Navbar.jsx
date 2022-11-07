@@ -1,10 +1,8 @@
 import {Box, Text} from "@chakra-ui/react"
 import { useContext } from "react"
-import { Link } from "react-router-dom"
+import {Link} from 'react-scroll'
 import { ThemeContext } from "../../Context/ThemeContextProvider"
-// import { ThemeContext } from "../../Context/ThemeContextProvider"
 import NavMenu from "../NavMenu/NavMenu"
-// import Menu from "../NavMenu/NavMenu"
 import './style.css'
 function Navbar() {
   const {Theme} = useContext(ThemeContext)
@@ -19,16 +17,12 @@ function Navbar() {
      </Box>
     
      <Box display={{lg:"flex",md:"none",sm:"none",base:"none"}} visibility={{lg:"initial",md:"hidden",sm:"hidden",base:"hidden"}}  w="50%" justifyContent="space-evenly" >
-      <Link to="/" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Home</Text></Link>
-      <Link to="/aboutme" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>About Me</Text></Link>
-      <Link to="/Skills" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Skills</Text>  </Link>
-      <Link to="/Projects" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Projects</Text></Link>
-      <Link to="/Contact" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Contact</Text></Link>
-      <Link to='/resume'><Text
-      //  onClick={()=>{
-      //   window.open('https://drive.google.com/file/d/1Lfzd1CVfZ756PigWVKUQtyQS75lbFFPw/view?usp=sharing')
-      // }}
-       color='rgb(10, 71, 109)' className="hover" variant='outline'>Resume</Text></Link>
+      <Link spy={true} smooth={true} offset={-150} duration={500}  to="/" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Home</Text></Link>
+      <Link spy={true} smooth={true} offset={-180} duration={500} to="/aboutme" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>About Me</Text></Link>
+      <Link spy={true} smooth={true} offset={-90} duration={500}  to="/skills" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Skills</Text>  </Link>
+      <Link spy={true} smooth={true} offset={-150} duration={500}  to="/projects" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Projects</Text></Link>
+      <Link spy={true} smooth={true} offset={-150} duration={500}  to="/contact" ><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Contact</Text></Link>
+      <Link spy={true} smooth={true} offset={-150} duration={500}  to="/"><Text color='rgb(10, 71, 109)' className="hover" variant='outline'>Resume</Text></Link>
      </Box>
      <NavMenu />
     </Box></>
