@@ -1,11 +1,9 @@
-import { Box, Text } from '@chakra-ui/react'
-import React, { useContext, useState } from 'react'
-import { ThemeContext } from '../../Context/ThemeContextProvider'
+import { Box } from '@chakra-ui/react'
+import React from 'react'
 import ProjectsCard from '../../components/ProjectCard/ProjectsCard'
 import "./style.css"
-import { motion } from 'framer-motion'
+import ProjectHeading from '../../components/ProjectCard/ProjectHeading'
 function Projects() {
-  const {Theme} = useContext(ThemeContext)
   const projectData = [
     {   id : 1 ,
       image : "/images/projects/tripoto.png", 
@@ -43,25 +41,27 @@ function Projects() {
       tech : ["JavaScript" ,"React" ,"Socket.io" , "ChakraUI" ] , 
       git : "https://github.com/AnasQu7/Chat-App" , 
       dl : "https://chat-hat.netlify.app/"
-    },
-    {   id : 5 ,
-      image : "/images/projects/youtube.png", 
-      description : "YouTube is a video sharing service where users can watch, like, share, comment and upload their own videos." , 
-      feature : ["Vedio Streaming","Search"] ,
-      title : "Youtube" ,
-      tech : ["JavaScript" , "Html" ,"Css"  ] , 
-      git : "" , 
-      dl : "https://heroic-syrniki-3cfb29.netlify.app/"
-    },
-    {   id : 6 ,
-      image : "/images/projects/starwars.png", 
-      description : "All characters of Star Wars. " , 
-      feature : ["Search","Character Details"] ,
-      title : "Star Wars" ,
-      tech : ["JavaScript" , "Html" ,"Css" ] , 
-      git : "" , 
-      dl : "https://roaring-mochi-08b523.netlify.app"
-    },
+    }
+    // ,
+    // {   id : 5 ,
+    //   image : "/images/projects/youtube.png", 
+    //   description : "YouTube is a video sharing service where users can watch, like, share, comment and upload their own videos." , 
+    //   feature : ["Vedio Streaming","Search"] ,
+    //   title : "Youtube" ,
+    //   tech : ["JavaScript" , "Html" ,"Css"  ] , 
+    //   git : "" , 
+    //   dl : "https://heroic-syrniki-3cfb29.netlify.app/"
+    // },
+    // {   id : 6 ,
+    //   image : "/images/projects/starwars.png", 
+    //   description : "All characters of Star Wars. " , 
+    //   feature : ["Search","Character Details"] ,
+    //   title : "Star Wars" ,
+    //   tech : ["JavaScript" , "Html" ,"Css" ] , 
+    //   git : "" , 
+    //   dl : "https://roaring-mochi-08b523.netlify.app"
+    // }
+    ,
     {   id : 7 ,
       image : "/images/projects/uboric.png", 
       description : "Uboric is a e-commerce site." , 
@@ -70,38 +70,30 @@ function Projects() {
       tech : ["JavaScript" , "Html" ,"Css" ] , 
       git : "https://github.com/Amrutha010/uboric-clone" , 
       dl : "https://shimmering-kleicha-ab30ef.netlify.app"
-    },
-    {   id : 8 ,
-      image : "/images/projects/calculator.png", 
-      description : "To calculate simple mathematical terms." , 
-      feature : ["Multiplication","Devision","Subtraction","Addition"] ,
-      title : "Calculator" ,
-      tech : ["JavaScript" , "Html" ,"Css" ] , 
-      git : "" , 
-      dl : "https://fancy-biscuit-dec798.netlify.app/"
     }
+    // ,
+    // {   id : 8 ,
+    //   image : "/images/projects/calculator.png", 
+    //   description : "To calculate simple mathematical terms." , 
+    //   feature : ["Multiplication","Devision","Subtraction","Addition"] ,
+    //   title : "Calculator" ,
+    //   tech : ["JavaScript" , "Html" ,"Css" ] , 
+    //   git : "" , 
+    //   dl : "https://fancy-biscuit-dec798.netlify.app/"
+    // }
     
   ]
-  const [Pro , setPro] = useState(0)
-  const nextProject = ()=>{
-    if(Pro===projectData.length-1){
-      setPro(0)
-     }else{
-       setPro(Pro+1)
-     }
-   }
-   const preProject = ()=>{
-    if(Pro===0){
-      setPro(projectData.length-1)
-    }else{
-      setPro(Pro-1)
-    }
-  }
+  
   return (
-  <Box width='100%' id="/projects">
-<Box gap={50} className="inner-header flex">
-     <Box>
-<ProjectsCard props={projectData[Pro]} nextProject={nextProject} preProject={preProject}/>
+  <Box  width='100%' id="/projects">
+<Box  className="inner-header flex">
+     <Box display="flex" flexDir='column' rowGap={50}>
+     <ProjectHeading/>
+      {
+        projectData.map((e)=>{
+        return <ProjectsCard props={{...e}}/>
+        })
+      }
     </Box>
    
 </Box>

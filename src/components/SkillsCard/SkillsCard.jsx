@@ -36,7 +36,7 @@ function SkillsCard(props) {
       transition="2s"
       w={{ lg: "80vw", md: "90vw", sm: "90vw", base: "90vw" }}
       mb="50px"
-      p={{ lg: 10, md: 6, sm: 20, base: 20 }}
+      p={{ lg: 10, md: 6, sm: 20, base: 10 }}
       className={Theme ? "skillContainerDark" : "skillContainer"}
     >
       <Text
@@ -45,10 +45,10 @@ function SkillsCard(props) {
       >
         {heading}
       </Text>
-      <SimpleGrid p={{lg:4,md:5,sm:'0px',base:'0px'}} gap={8} columns={{lg:5 , md : 4 , sm:3 , base:2}}>
+      <SimpleGrid p={{lg:4,md:5,sm:'0px',base:'0px'}} rowGap={6} gap={{lg:8,md:6,sm:4,base:0}} columns={{lg:5 , md : 4 , sm:3 , base:2}}>
         {skills.map((e,i)=>{
             return <Box >
-            <Box border='1px solid ' borderRadius={20} margin='auto' display='flex' flexDirection='column' gap={2} alignItems="center" textAlign="center" p={6} w={{"xl":'170px',lg:"140px",md:'140px',sm:'100px',base:'100px'}} key={i}>
+            <Box border='1px solid' borderRadius={20} margin='auto' display='flex' flexDirection='column' gap={2} alignItems="center" textAlign="center" p={6} w={{"xl":'170px',lg:"140px",md:'140px',sm:'100px',base:'100px'}} key={i}>
               {skillsObj[e]}
               <Text textTransform='uppercase'>{e}</Text> 
             </Box>
