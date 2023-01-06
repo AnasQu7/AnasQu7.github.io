@@ -10,7 +10,7 @@ function Aboutme() {
   
   return (
 <Box gap={50} id="/aboutme" flexDirection={{lg:'row',md:'column',sm:'column',base:'column'}} className="inner-header flex">
-<AvatarImage img="/images/Avatar.jpg"/>
+<AvatarImage img="/images/Avatar.png"/>
 <Bio/>
 </Box>
     

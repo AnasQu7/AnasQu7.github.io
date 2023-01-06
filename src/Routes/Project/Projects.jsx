@@ -81,6 +81,15 @@ function Projects() {
     //   git : "" , 
     //   dl : "https://fancy-biscuit-dec798.netlify.app/"
     // }
+    ,{   id : 8 ,
+      image : "/images/projects/skinstore.png", 
+      description : "SkinStore is an authorized retailer of premium beauty brands across skin, makeup and hair." , 
+      feature : ["User Authentication","E-Commerce","Sorting" , "Filter" , "Search", "Admin Panel"] ,
+      title : "Skin Care" ,
+      tech : ["JavaScript" , "Html" ,"Css" ,"React" , "ChakraUI" , "Node"] , 
+      git : "https://github.com/AnasQu7/Skinstore-Clone" , 
+      dl : "https://timely-cucurucho-1b7757.netlify.app/"
+    }
     
   ]
   

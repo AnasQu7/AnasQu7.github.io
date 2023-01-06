@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Image } from '@chakra-ui/react'
 import React, { useContext } from 'react'
 import { ThemeContext } from '../../Context/ThemeContextProvider'
 import "./style.css"
@@ -11,7 +11,7 @@ function AvatarImage({img}) {
     transition="2s"
   className={Theme ? "avatarDark" : "avatar"}>
 		
-			<img src={img} alt="Mohammad Anas Quraishi" />
+			<Image ml="10px" mt="9px" src={img} alt="Mohammad Anas Quraishi" />
 		
 	</Box>
 	

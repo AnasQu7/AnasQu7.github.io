@@ -10,14 +10,12 @@ function StatsCard() {
         const currentMonth = new Date().getMonth();
         const shownMonths = 7;
       
-        return contributions.filter(day => {
+        return contributions.filter((day,i) => {
           const date = new Date(day.date);
           const monthOfDay = date.getMonth();
       
           return (
-            date.getFullYear() === currentYear &&
-            monthOfDay > currentMonth - shownMonths &&
-            monthOfDay <= currentMonth
+            i>=133
           );
         });
       };
