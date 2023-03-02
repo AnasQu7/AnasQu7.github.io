@@ -11,7 +11,7 @@ function AvatarImage({img}) {
     transition="2s"
   className={Theme ? "avatarDark" : "avatar"}>
 		
-			<Image ml="10px" mt="9px" src={img} alt="Mohammad Anas Quraishi" />
+			<Image ml="9px" mt="9px" src={img} alt="Mohammad Anas Quraishi" />
 		
 	</Box>
 	
