@@ -10,7 +10,7 @@ function Bio() {
   const {Theme} = useContext(ThemeContext)
   const navigate = useNavigate();
 
- const content = "I am looking forward to start a career as a web developer with a reputed firm driven by technology. Ability to translate business requirements into technical solutions and increasing my scope of knowledge in the field of Computer Science."
+ const content = "Full Stack Software Engineer with over 2 years of experience in developing scalable, secure, and high-performance applications. Skilled in both frontend and backend development, AI integrations, and system optimization. Passionate about creating seamless, intelligent, and user-focused digital solutions."
 
   return (
     <Box

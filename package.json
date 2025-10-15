@@ -14,12 +14,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^3.3.4",
-    "react-icons": "^4.6.0",
+    "react-icons": "^4.12.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.8",
     "react-tooltip": "^4.4.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "wiskerai-react-widget": "^1.0.8"
   },
   "scripts": {
     "predeploy": "npm run build",

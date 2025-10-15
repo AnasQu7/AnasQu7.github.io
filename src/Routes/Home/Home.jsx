@@ -24,10 +24,10 @@ function Home() {
           <Aboutme />
           <Box id="/skills">
             <Skills />
-            <Stats Card={StatsCard} />
+            {/* <Stats Card={StatsCard} />
             <Stats Card={Streak} />
             <Stats Card={GitStats1} />
-            <Stats Card={GitStats} />
+            <Stats Card={GitStats} /> */}
           </Box>
 
           <Projects />
